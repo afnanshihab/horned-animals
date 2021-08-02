@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HornedBeats from './components/HornedBeats' 
+import HornedBeats from './HornedBeats' 
 
 
 class Main extends Component {
