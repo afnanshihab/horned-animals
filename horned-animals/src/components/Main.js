@@ -1,24 +1,23 @@
-import React, { Component } from 'react'
-import HornedBeats from './HornedBeats' 
-
+import React, { Component } from 'react' ;
+import HornedBeats from './HornedBeats'  ;
+import hornedAnimalArr from './hornedbeats.json'
 
 class Main extends Component {
     render() {
         return (
-            <div>
+            <div>{
+                hornedAnimalArr.map((animal,i) => {
+                   return    <HornedBeats
+                               key={i}
+                               clicks = {0}
+                               title ={animal.title}
+                               imgUrl = {animal.image_url}
+                               description = {animal.description}
+                                 />
+       
+                })
 
-                <HornedBeats
-                title = 'UniWhal'
-                imgUrl = 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'
-                description = 'A unicorn and a narwhal nuzzling their horns'
-                />
-
-               <HornedBeats
-                title = 'Unicorn Head'
-                imgUrl = 'https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg'
-                description = 'Someone wearing a creepy unicorn head mask'
-               />
-
+                }
 
             </div>
         )
