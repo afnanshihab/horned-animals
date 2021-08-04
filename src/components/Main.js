@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import HornedBeats from "./HornedBeats";
 import hornedAnimalArr from "./hornedbeats.json";
-import { Row } from 'react-bootstrap' ;
+import { Row , Container} from 'react-bootstrap' ;
+
 
 
 
 class Main extends Component {
   render() {
     return (
+      <Container>
       <Row>
         {hornedAnimalArr.map((animal, i) => {
           return (
@@ -18,12 +20,13 @@ class Main extends Component {
                 title={animal.title}
                 imgUrl={animal.image_url}
                 description={animal.description}
-                showModal={this.props.selectedbeats}
+                // showModal={this.props.Selectedbeat}
               />
             </div>
           );
         })}
       </Row>
+      </Container>
     );
   }
 }
