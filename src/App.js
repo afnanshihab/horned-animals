@@ -6,7 +6,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import hornedAnimalArr from "./components/hornedbeats.json";
-import myModal from './components/Selectedbeat.js';
+import MyModal from './components/Selectedbeat.js';
 
 class App extends Component {
 
@@ -42,7 +42,7 @@ class App extends Component {
         <div>
             <Header/>
       <Main showDataList = {this.handlerShow} data ={this.state.hornedList} />
-      <myModal animal = {this.state.animal} showModal ={this.state.show} closeData= {this.handlerClose}/>
+      <MyModal animal = {this.state.animal} showModal ={this.state.show} closeData= {this.handlerClose}/>
       <Footer/>
                
       </div>

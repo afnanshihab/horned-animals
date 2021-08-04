@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Button, Col } from "react-bootstrap";
-import myModal from "./Selectedbeat";
+import MyModal from "./Selectedbeat";
 
 class HornedBeats extends Component {
   constructor(props) {
@@ -62,7 +62,7 @@ class HornedBeats extends Component {
                 height="25px"
               />
             </Button>
-            <Button   onClick ={this.display} >click me</Button>
+            <Button   onClick ={()=>  {this.props.showModal(this.props.data)} }>click me</Button>
           </Card.Body>
         </Card>
       </Col>

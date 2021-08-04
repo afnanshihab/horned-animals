@@ -20,7 +20,8 @@ class Main extends Component {
                 title={animal.title}
                 imgUrl={animal.image_url}
                 description={animal.description}
-                // showModal={this.props.Selectedbeat}
+                showModal={this.props.showDataList}
+                data = { animal }
               />
             </div>
           );

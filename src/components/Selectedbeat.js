@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Card , Modal , Button }   from 'react-bootstrap';
 
 
-export default class  myModal extends Component {
+export default class  MyModal extends Component {
     render() {
         return (
             <div>
@@ -13,7 +13,7 @@ export default class  myModal extends Component {
                         <Modal.Title>{this.props.animal.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body><Card bg='light'>
-                        <Card.Img className='carded' variant="top" src={this.props.animal.imageUrl} width={200} height={280} />
+                        <Card.Img className='carded' variant="top" src={this.props.animal.image_url} width={200} height={280} />
                         <Card.Body>
                             <Card.Text style={{ alignItems: 'center' }}>
                                 {this.props.animal.description}
