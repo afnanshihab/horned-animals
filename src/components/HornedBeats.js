@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Card, Button, Col } from "react-bootstrap";
+import MyModal from "./Selectedbeat";
 
 class HornedBeats extends Component {
   constructor(props) {
     super(props);
     this.state = {
       clicks: this.props.clicks,
+      // show : false;
     };
   }
 
@@ -15,6 +17,16 @@ class HornedBeats extends Component {
     });
   };
 
+
+
+  // closeModal = () => {
+  //   this.setState  ({
+  //     show: false 
+  //   });
+  // }
+
+  
+
   veiwBeats =() => {
     let data = {
       title: this.props.title,
@@ -23,11 +35,12 @@ class HornedBeats extends Component {
 
     }
 
-    this.props.showModal(data)
+    // this.props.showModal(data)
   }
 
   render() {
     return (
+      <>
       <Col>
         <Card style={{ width: "18rem" }}>
           <Card.Img
@@ -49,17 +62,15 @@ class HornedBeats extends Component {
                 height="25px"
               />
             </Button>
+            <Button   onClick ={()=>  {this.props.showModal(this.props.data)} }>click me</Button>
           </Card.Body>
         </Card>
       </Col>
 
-      // <div>
-      //      <h2> {this.props.title} </h2>
-      //      <img  src = {this.props.imgUrl}  alt = {this.props.title}  width="350px"  height="350px" />
-      //      <p> {this.props.description} </p>
-      //      <img onClick ={this.newClicks} src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYosBicVMF7B-w1lQeHj7Q5GYmVvmwGC5Xbg&usqp=CAU"  alt = "heart"  width = "20px" height='25px'/>
-      // <span>{this.state.clicks}</span>
-      // </div>
+         
+
+    {/* <myModal showModal = {this.state.show}   closeData = {this.closeModal}  animal /> */}
+</>
     );
   }
 }
