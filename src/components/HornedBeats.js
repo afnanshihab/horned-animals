@@ -35,7 +35,7 @@ class HornedBeats extends Component {
 
     }
 
-    // this.props.showModal(data)
+  
   }
 
   render() {
